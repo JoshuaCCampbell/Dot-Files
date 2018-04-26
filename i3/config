@@ -13,7 +13,7 @@ set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango: Noto Mono
+font pango: Knack Nerd Font
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -35,10 +35,10 @@ floating_modifier $mod
 bindsym $mod+Return exec i3-sensible-terminal
 
 # kill focused window
-bindsym $mod+Shift+q kill
+bindsym $mod+Shift+d kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec rofi -show run
+bindsym $mod+space exec rofi -show run
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
@@ -83,10 +83,10 @@ bindsym $mod+f fullscreen toggle
 #bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
-bindsym $mod+Shift+space floating toggle
+#bindsym floating toggle
 
 # change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
+#bindsym focus mode_toggle
 
 # focus the parent container
 bindsym $mod+a focus parent
@@ -94,61 +94,62 @@ bindsym $mod+a focus parent
 # focus the child container
 #bindsym $mod+d focus child
 
-set $workspace1 "q "
-set $workspace2 "1 "
-set $workspace3 "2 "
-set $workspace4 "w "
+set $workspace_1 "1 "
+set $workspace_2 "2 "
+set $workspace_w "w "
+set $workspace_q "q "
+set $workspace_e "e "
 
 # switch to workspace
-bindsym $mod+q workspace $workspace1
-bindsym $mod+1 workspace $workspace2
-bindsym $mod+2 workspace $workspace3
-bindsym $mod+w workspace $workspace4
+bindsym $mod+1 workspace $workspace_1
+bindsym $mod+q workspace $workspace_q
+bindsym $mod+2 workspace $workspace_2
+bindsym $mod+w workspace $workspace_w
 bindsym $mod+3 workspace 3
+bindsym $mod+e workspace $workspace_e
 bindsym $mod+4 workspace 4
-bindsym $mod+5 workspace 5
-#bindsym $mod+6 workspace 6
-#bindsym $mod+7 workspace 7
-#bindsym $mod+8 workspace 8
-#bindsym $mod+9 workspace 9
-#bindsym $mod+0 workspace 10
-bindsym $mod+e workspace "e"
 bindsym $mod+r workspace "r"
+bindsym $mod+5 workspace 5
 bindsym $mod+t workspace "t"
-#bindsym $mod+y workspace "y"
-#bindsym $mod+u workspace "u"
-#bindsym $mod+i workspace "i"
-#bindsym $mod+o workspace "o"
-#bindsym $mod+p workspace "p"
+bindsym $mod+6 workspace 6
+bindsym $mod+y workspace "y"
+bindsym $mod+7 workspace 7
+bindsym $mod+u workspace "u"
+bindsym $mod+8 workspace 8
+bindsym $mod+i workspace "i"
+bindsym $mod+9 workspace 9
+bindsym $mod+o workspace "o"
+bindsym $mod+0 workspace 10
+bindsym $mod+p workspace "p"
 
 # move focused container to workspace
-bindsym $mod+shift+6 move container to workspace $workspace1
-bindsym $mod+shift+1 move container to workspace $workspace2
-bindsym $mod+shift+2 move container to workspace $workspace3
-bindsym $mod+shift+7 move container to workspace $workspace4
+bindsym $mod+shift+1 move container to workspace $workspace_1
+bindsym $mod+shift+q move container to workspace $workspace_q
+bindsym $mod+shift+2 move container to workspace $workspace_2
+bindsym $mod+shift+w move container to workspace $workspace_w
 bindsym $mod+shift+3 move container to workspace 3
+bindsym $mod+shift+e move container to workspace $workspace_e
 bindsym $mod+shift+4 move container to workspace 4
+bindsym $mod+shift+r move container to workspace "r"
 bindsym $mod+shift+5 move container to workspace 5
-#bindsym $mod+shift+6 move container to workspace 6
-#bindsym $mod+shift+7 move container to workspace 7
-#bindsym $mod+shift+8 move container to workspace 8
-#bindsym $mod+shift+9 move container to workspace 9
-#bindsym $mod+shift+0 move container to workspace 10
-bindsym $mod+shift+8 move container to workspace "e"
-bindsym $mod+shift+9 move container to workspace "r"
-bindsym $mod+shift+0 move container to workspace "t"
-#bindsym $mod+shift+y move container to workspace "y"
-#bindsym $mod+shift+u move container to workspace "u"
-#bindsym $mod+shift+i move container to workspace "i"
-#bindsym $mod+shift+o move container to "o"
-#bindsym $mod+Control+Shift+p move container to workspace "p"
+bindsym $mod+shift+t move container to workspace "t"
+bindsym $mod+shift+6 move container to workspace 6
+bindsym $mod+shift+y move container to workspace "y"
+bindsym $mod+shift+7 move container to workspace 7
+bindsym $mod+shift+u move container to workspace "u"
+bindsym $mod+shift+8 move container to workspace 8
+bindsym $mod+shift+i move container to workspace "i"
+bindsym $mod+shift+9 move container to workspace 9
+bindsym $mod+shift+o move container to "o"
+bindsym $mod+shift+0 move container to workspace 10
+bindsym $mod+shift+p move container to workspace "p"
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
-bindsym $mod+Shift+r restart
+bindsym $mod+Shift+v restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Shift+f exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
