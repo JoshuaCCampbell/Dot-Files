@@ -1,4 +1,4 @@
-URxvt.font:xft:Noto Mono:size=13
+URxvt.font:xft:FuraCode Nerd Font Mono:size=14
 URxvt.internalBorder:10
 URxvt.scrollBar:false
 URxvt.transparent:true
@@ -42,7 +42,7 @@ URxvt.shading:20
 
 rofi.color-enabled: true
 rofi.color-window: #141021, #c16772, #9568a1
-rofi.color-normal: #141021, #ffeefc, #312842, #c16772, #ffeefc
+ofi.color-normal: #141021, #ffeefc, #312842, #c16772, #ffeefc
 rofi.color-active: #141021, #c05c47, #312842, #c05c47, #ffeefc
 rofi.color-urgent: #141021, #e4b226, #312842, #e4b226, #ffeefc
 rofi.width: 800

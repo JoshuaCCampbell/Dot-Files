@@ -19,12 +19,13 @@ PROMPT='%n%f@%m%f %1~%f %# '
 
 # Aliases
 alias ll='ls -l'
-alias la='ls -al'
+alias la='ls -a'
 alias ls='ls --color=auto'
 alias vi='vim'
 alias android-studio='nohup $ANDROID_BIN/studio.sh > /dev/null'
 alias ps='ps -ef'
-#alias mountext='~/Documents/Scripts/MountDrive.sh'
+alias xi='sudo xbps-install -S'
+alias xu='sudo xbps-install -Su'
 
 # Node version manager
 export NVM_DIR="$HOME/.nvm"
