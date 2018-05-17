@@ -1,3 +1,6 @@
+" Set path for native fuzzy find
+set path+=**
+
 " Necessities
 set nocompatible
 filetype indent plugin on
@@ -13,14 +16,15 @@ set shiftwidth=4
 set softtabstop=4
 set expandtab
 
-set path+=**
-
-" Plugins directory
+" ## Vim Plug plugins ##
 call plug#begin('~/.vim/plugged')
 
 Plug 'itmammoth/doorboy.vim'
+Plug 'bogado/file-line'
+Plug 'fatih/vim-go'
 
-" Initialize plugins
-call plug#end() 
+call plug#end()
 
-" Colors
+" vim-go settings
+let g:go_fmt_autosave = 0
+

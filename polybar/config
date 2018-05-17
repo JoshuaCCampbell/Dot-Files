@@ -118,4 +118,4 @@ label =  %date%, %time%
 [module/spotify]
 type = custom/script
 exec = ~/.config/polybar/spotify.sh
-interval = 1
+interval = 0.25
