@@ -8,6 +8,10 @@ bindkey -v
 zstyle :compinstall filename '/home/joshua/.zshrc'
 
 export PATH=$HOME/Scripts:"$PATH"
+export PATH="$HOME/Scripts/Local:$PATH"
+export LD_LIBRARY_PATH="/usr/local/lib"
+
+export MONITOR="eDP-1"
 export GITHUB="https://github.com/JoshuaCCampbell"
 
 autoload -Uz compinit
@@ -23,7 +27,7 @@ alias la='ls -al'
 alias ls='ls --color=auto'
 alias vi='vim'
 alias ps='ps -ef'
-alias pacman_update='sudo pacman -Syu | tee -a Documents/Logs/update.log'
+alias new_use='emerge --update --changed-use --deep @world'
 
 # Node version manager
 export NVM_DIR="$HOME/.nvm"
